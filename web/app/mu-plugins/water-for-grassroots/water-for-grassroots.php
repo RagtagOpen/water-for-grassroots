@@ -118,3 +118,34 @@ function waterforgrassroots_register_tax_region() {
 
 }
 add_action( 'init', 'waterforgrassroots_register_tax_region', 0 );
+
+/**
+ * Skip the post meta for our CPT.
+ */
+function waterforgrassroots_skip_meta( $meta ) {
+	if ( 'organization' === get_post_type() ) {
+		$meta = array( 'post-date' ); // Needs something to not be "empty".
+	}
+	return $meta;
+}
+add_filter( 'twentytwenty_post_meta_location_single_top', 'waterforgrassroots_skip_meta' );
+
+/**
+ * Display the organization's regions.
+ */
+function waterforgrassroots_render_regions( $post_id ) {
+	if ( 'organization' === get_post_type( $post_id ) ) {
+		?>
+		<li class="post-regions meta-wrapper">
+			<span class="meta-icon">
+				<span class="screen-reader-text">Regions</span>
+			</span>
+			<span class="meta-text">
+				<?php the_terms( $post_id, 'region' ); ?>
+			</span>
+		</li>
+		<?php
+	}
+}
+add_action( 'twentytwenty_end_of_post_meta_list', 'waterforgrassroots_render_regions' );
+
