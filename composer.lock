@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaf3a77d019e769c89ef2fee369d7b09",
+    "content-hash": "7493ea827e2ae190f9b3cdab9063e2ba",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3777,15 +3777,15 @@
         },
         {
             "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
-            "version": "2.3",
+            "version": "2.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
-                "reference": "tags/2.3"
+                "reference": "tags/2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.2.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -3877,15 +3877,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "6.9",
+            "version": "6.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/6.9"
+                "reference": "tags/6.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.6.9.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.6.9.1.zip",
                 "reference": null,
                 "shasum": null
             },
