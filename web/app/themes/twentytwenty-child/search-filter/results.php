@@ -32,7 +32,7 @@ if ( $query->have_posts() )
 		
 		?>
 		<div>
-			<h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 			<p class="results-excerpt"><?php the_excerpt(); ?></p>
 		</div>
 		
