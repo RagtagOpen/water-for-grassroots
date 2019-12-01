@@ -33,6 +33,17 @@ if ( $query->have_posts() )
 		?>
 		<div>
 			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<?php
+		if( function_exists( 'waterforgrassroots_render_regions' ) )
+		{
+		?>
+			<ul>
+				<?php 
+				/* regions render as list items, so wrap them in <ul> tag above */
+				waterforgrassroots_render_regions( get_the_id() ); 
+		}
+		?>
+			</ul>		
 			<p class="results-excerpt"><?php the_excerpt(); ?></p>
 		</div>
 		
