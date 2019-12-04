@@ -44,7 +44,7 @@ if ( $query->have_posts() )
 		}
 		?>
 			</ul>		
-			<p class="results-excerpt"><?php the_excerpt(); ?></p>
+			<p class="results-excerpt"><?php echo( get_the_excerpt() ); ?> <a href="<?php the_permalink(); ?>">Learn more and volunteer &rarr;</a></p>
 		</div>
 		
 		<hr />
