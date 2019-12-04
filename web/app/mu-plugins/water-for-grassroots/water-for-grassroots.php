@@ -63,16 +63,6 @@ function waterforgrassroots_register_cpt_organization() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
-		'template' => array(
-			array( 'core/media-text' ),
-			array( 'core/separator' ),
-			array( 'core/heading' ),
-			array( 'core/paragraph' ),
-			array( 'core/heading' ),
-			array( 'core/paragraph' ),
-			array( 'core/heading' ),
-			array( 'core/paragraph' ),
-		),
 	);
 	register_post_type( 'organization', $args );
 
