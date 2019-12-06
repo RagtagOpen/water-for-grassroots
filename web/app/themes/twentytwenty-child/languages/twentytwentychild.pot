@@ -1,0 +1,48 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Twenty Twenty W4G Child\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 08:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3"
+
+#: search-filter/results.php:47
+msgid "Learn more and volunteer"
+msgstr ""
+
+#: search-filter/results.php:75
+msgid "No organizations found."
+msgstr ""
+
+#: search-filter/results.php:55
+msgid "of"
+msgstr ""
+
+#: search-filter/results.php:27
+msgid "organizations"
+msgstr ""
+
+#: search-filter/results.php:55
+msgid "Page"
+msgstr ""
+
+#. Author of the theme
+msgid "Richard Kim"
+msgstr ""
+
+#. Description of the theme
+msgid "Twenty Twenty Child Theme for Water for Grassroots"
+msgstr ""
+
+#. Name of the theme
+msgid "Twenty Twenty W4G Child"
+msgstr ""

@@ -24,7 +24,7 @@
 if ( $query->have_posts() )
 {
 	?>
-    <p class="num-results"><?php echo $query->found_posts; ?> organizations</p>
+	<p class="num-results"><?php echo $query->found_posts; ?> <?php esc_html_e( 'organizations', 'twentytwentychild' ) ?></p>
 	<?php
 	while ($query->have_posts())
 	{
@@ -44,14 +44,20 @@ if ( $query->have_posts() )
 		}
 		?>
 			</ul>		
-			<p class="results-excerpt"><?php echo( get_the_excerpt() ); ?> <a href="<?php the_permalink(); ?>">Learn more and volunteer &rarr;</a></p>
+			<p class="results-excerpt"><?php echo( get_the_excerpt() ); ?> <a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Learn more and volunteer', 'twentytwentychild' ) ?> &rarr;</a></p>
 		</div>
 		
 		<hr />
 		<?php
 	}
 	?>
-	<p class="page-of-page">Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?></p>
+	<?php 
+		$page_s = __( 'Page', 'twentytwentychild' );
+		$current_page = $query->query['paged'];
+		$of_s = __( 'of', 'twentytwentychild' );
+		$total_pages = $query->max_num_pages;
+	?>
+	<p class="page-of-page"><?php printf("%s %s %s %s", $page_s, $current_page, $of_s, $total_pages) ?></p>
 	
 	<div class="pagination">
 		
@@ -70,6 +76,8 @@ if ( $query->have_posts() )
 }
 else
 {
-	echo '<p class="no-results">No Results Found</p>';
+?>
+	<p class="no-results"><?php esc_html_e( 'No organizations found.', 'twentytwentychild' ) ?></p>
+<?php 
 }
 ?>
