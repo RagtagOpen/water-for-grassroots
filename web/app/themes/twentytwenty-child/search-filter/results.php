@@ -76,6 +76,8 @@ if ( $query->have_posts() )
 }
 else
 {
-	echo '<p class="no-results"><?php esc_html_e( 'No organizations found.', 'twentytwentychild' ) ?></p>';
+?>
+	<p class="no-results"><?php esc_html_e( 'No organizations found.', 'twentytwentychild' ) ?></p>
+<?php 
 }
 ?>
