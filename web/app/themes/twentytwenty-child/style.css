@@ -8,3 +8,259 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  twentytwentychild
 */
+
+
+
+/* ### imported/deprecated from WP Customizer, 12/2019 ### */
+
+/* Update body font */
+.entry-content p, 
+.entry-content ol, 
+.entry-content ul, 
+.entry-content dl, 
+.entry-content dt,
+.widget_text p, 
+.widget_text ol, 
+.widget_text ul, 
+.widget_text dl, 
+.widget_text dt, 
+.widget-content .rssSummary {
+	font-family: Georgia, serif;
+	font-size: 1.9rem;
+}
+
+/* Adjust headings */
+.site-title {
+	font-size: 3.2rem;
+}
+.entry-title {
+	font-size: 4.2rem;
+}
+
+/* Update button styles */
+
+.sf-field-submit input[type="submit"] {
+	border-radius: 5px;
+	padding: .8em 1.4em;
+	transition: .2s ease-in-out;
+}
+sf-field-submit input[type="button"]:focus, sf-field-submit input[type="button"]:hover, sf-field-submit input[type="reset"]:focus, sf-field-submit input[type="reset"]:hover, sf-field-submit input[type="submit"]:focus, sf-field-submit input[type="submit"]:hover {
+	text-decoration: none;
+	background: #111;
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+}
+
+/* Hide page title on the homepage */
+.home .entry-header {
+	display: none;
+}
+
+/* Hide post date on the Organizations CPT  */
+.organization .post-meta .post-date {
+	display: none;
+}
+
+/* Hide excerpt on Organization CPT */
+.organization .intro-text {
+	display: none;
+}
+
+/* Remove spacing on the homepage between the top of the content and the map */
+.home .post-inner {
+	padding-top: 0;
+}
+
+.entry-content > .alignfull.no-top-spacing {
+	margin-top: 0;
+}
+
+/* Reduce homepage content width */
+body.template-full-width.home  .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide), 
+body.template-full-width.home [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 80rem;
+}
+
+/* Make sure media & text blocks always stack image, then text */
+@media (max-width: 600px) {
+	.wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__media {
+		-ms-grid-column: 1;
+		grid-column: 1;
+		-ms-grid-row: 1;
+		grid-row: 1;
+	}
+	.wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content {
+		-ms-grid-column: 1;
+		grid-column: 1;
+		-ms-grid-row: 2;
+		grid-row: 2;
+	}
+}
+
+/* checkbox filtering styles */
+.searchandfilter ul {
+	margin-left: 0;
+}
+
+/* tighten vertical space between checkboxes */
+.searchandfilter[data-sf-form-id="265"] ul li {
+	padding: 2px 0; 
+}
+
+/* Update fonts */
+.sf-label-checkbox,
+.search-filter-results .num-results,
+.search-filter-results  .page-of-page {
+	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.search-filter-results .num-results,
+.search-filter-results  .page-of-page {
+	font-size: 1.6rem;
+}
+
+/* Style results */
+.entry-content .wp-block-columns .search-filter-results h4 {
+	margin-bottom: 1rem;
+}
+.search-filter-results ul {
+	margin: 0 0 2rem 0;
+}
+.search-filter-results ul li {
+	margin: 0;
+	list-style-type: none;
+	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.5rem;
+}
+.search-filter-results ul li a {
+	color: #555;
+	text-decoration: none;	
+}
+.search-filter-results ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Reduce space between full-width and subsequent blocks */
+@media (min-width: 1220px) {
+	.entry-content > .alignfull {
+		margin-bottom: 5rem;
+	}
+}
+
+/* Reduce space in headers */
+.singular .entry-header {
+	padding: 8rem 0 4rem;
+}
+
+.post-meta-wrapper {
+	margin-top: 2rem;
+}
+
+/* Hide post nav */
+.pagination-single {
+	display: none;
+}
+
+/* Reduce size and space around organization featured images */
+.single-organization .featured-media-inner,
+.tax-region .featured-media-inner {
+	width: 15vw;
+}
+.single-organization .featured-media .featured-media {
+    margin-top: -1em;
+}
+.single-organization .featured-media + .post-inner {
+	padding-top: 3rem;
+}
+
+/* Center footer widgets */
+.footer-widgets {
+	width: 100%;
+}
+
+.widget-content {
+	margin: auto;
+	max-width: 58rem;
+	width: calc(100% - 4rem);
+}
+
+/* Hide Powered by WordPress credit */
+.powered-by-wordpress {
+	display: none;
+}
+
+/* Tighten up on mobile */
+
+@media screen and (max-width:768px) {
+	.home .wp-block-column {
+		flex-basis: 100% !important;
+	}
+	.wp-block-column:nth-child(2n) {
+    margin-left: 0;
+	}
+	.widget-content {
+		max-width: 100%;
+	}
+	.single-organization .featured-media-inner {
+		width: 30vw;
+	}
+}
+
+@media screen and (max-width:520px) {
+	.header-inner {
+		padding: 2rem 0;
+	}
+	.header-inner .toggle {
+		margin-top: -2rem;
+	}
+	.site-title {
+		font-size: 1.7rem;
+	}
+	.entry-content h1, 
+	.entry-content h2, 
+	.entry-content h3, 
+	.entry-content h4, 
+	.entry-content h5, 
+	.entry-content h6 {
+		margin: 2rem auto 1rem;
+	}
+	h2, .heading-size-2 {
+		font-size: 2.8rem;
+	}
+	h3, .heading-size-3 {
+		font-size: 2.4rem;
+	}
+	h4, .heading-size-4 {
+		font-size: 2.1rem;
+	}
+	.entry-content p, 
+	.entry-content ol, 
+	.entry-content ul, 
+	.entry-content dl, 
+	.entry-content dt {
+		font-size: 1.7rem;
+	}
+	.searchandfilter label.inline,
+	.searchandfilter input[type="checkbox"] + label {
+		font-size: 1.4rem;
+	}
+	.alignnone, 
+	.aligncenter, 
+	.alignleft, 
+	.alignright, 
+	.alignwide {
+		margin-top: 2rem;
+	}
+	.entry-content hr {
+		display: none;
+	}
+	.single-organization .wp-block-media-text .wp-block-media-text__content {
+		padding: 2rem 0;
+	}
+	.single-organization .featured-media-inner {
+		width: 60vw;
+	}
+}
+
+.to-the-top {
+	display:none;
+}
